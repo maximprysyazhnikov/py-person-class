@@ -14,7 +14,9 @@ class Person:
 def create_person_list(people_data: list[dict]) -> list[Person]:
     Person.reset_people()
 
-    person_instances = [Person(data["name"], data["age"]) for data in people_data]
+    person_instances = [
+        Person(data["name"], data["age"]) for data in people_data
+    ]
 
     for data in people_data:
         current_person = Person.people[data["name"]]
